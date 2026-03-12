@@ -97,18 +97,19 @@ Two strings are considered anagrams if they contain the same characters with exa
 
 /* Given a string s consisting of lowercase English Letters. return the first non-repeating character in s. If there is no non-repeating character, return '$'. */
 
-let word = "geeksforgeeks";
-let count = {};
+// let word = "geeksforgeeks";
+// let count = {};
 
-for (const char of word) {
-  if (count[char]) {
-    count[char] += 1;
-  } else {
-    count[char]=1;
-  }
-}
-for (const char in count) {
-  if (count[char] === 1) {
-    console.log(char);
-  }
-}
+// for (const char of word) {
+//   if (count[char]) {
+//     count[char] += 1;
+//   } else {
+//     count[char]=1;
+//   }
+// }
+// for (const char in count) {
+//   if (count[char] === 1) {
+//     console.log(char);
+//   }
+// }
+
