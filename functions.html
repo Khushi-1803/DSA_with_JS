@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+     <h1 style="color: green">
+        WordCounter
+    </h1>
+
+    <p>
+        Type in the textbox to
+        automatically count the words
+    </p>
+
+    <textarea id="word" oninput="countWord()" 
+              rows="10" cols="60">
+    </textarea>
+    <br><br>
+
+    <p> Word Count:
+        <sp an id="show">0</span>
+    </p>
+    <script>
+       function countWord(){
+         let word = document.getElementById("word").value;
+        let count = 0;
+        let split = word.split(" ");
+        for (let i = 0; i < split.length; i++) {
+            if (split[i] != "") {
+                count+=1
+            }
+        }
+        document.getElementById("show").innerHTML = count;
+       }
+    </script>
+</body>
+</html> -->
+
+<!-- In this article, we see the methods to find out the caller function in Javascript. Sometimes, the developer may want to modify how a function works on the basis of its caller function. To find out the caller function name, we will use the Function object's caller property. -->
+
+<script>
+  function Foo() {
+    console.log(Foo.caller.name);
+  }
+  function Bar() {
+    Foo();
+  }
+  function Sam() {
+    Foo();
+  }
+  Bar();
+  Sam();
+</script>
+
+<!-- In JavaScript, function overriding means redefining an existing function with a new implementation. It allows developers to change or extend the behaviour of a user-defined or built-in function during runtime -->
+
+<script>
+    function greet(){
+        console.log("Hello");
+       
+    }
+    function greet(){
+        console.log("Hii There");
+    }
+    greet()
+</script>
+<!-- In JavaScript, functions are first-class citizens, meaning they can be passed as arguments to other functions just like variables. -->
+<script>
+    function greet() {
+  console.log("Hello!");
+}
+
+function callFunction(fn) {
+  fn();
+}
+
+callFunction(greet);
+</script>
